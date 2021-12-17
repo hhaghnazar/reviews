@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="/styles/style.css"></link>
+        <title th:text="${laptopModel.name}">A Laptop</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <section>
+                    <button>
+                        <a th:href="@{/}">Home</a>
+                    </button>
+                </section>
+            </nav>
+
+            <header>
+                <h1 th:text="${laptopModel.name}">A Laptop</h1>
+            </header>
+
+            <main>
+                <img th:src="${laptopModel.img_url}">
+
+                <ul>
+                    <p><a href="/laptops">Laptops</a></p>
+                    <li th:text="${laptopModel.name}"></li>
+
+                </ul>
+                <h2 th:text="${laptopModel.description}"></h2>
+
+            </main>
+
+            <footer>
+                <small>&copy Hesan Haghnazar 2022</small>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+* {
+   font-size: 30px;
+   font-style: courier;
+}
+
+body {
+  padding: 50px;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1{
+   font-size: 40px;
+}
+
+section {
+  padding: 50px 0;
+}
+
+img {
+  height: 200px;
+  width: auto;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.container {
+   background-color: #ccc;
+   border-radius: 10px;
+   height: 900px;
+   margin: auto;
+   max-width: 1000px;
+   padding: 50px;
+}
+
+table{
+  width: 60%;
+}
+
+ tr, td {
+  border: 1px solid black;
+  margin: auto;
+  width: 60%;
+}
+
+tr:first-child{
+  text-align: center;
+}
+
+td {
+  width: 50%;
+}
+
+footer {
+  padding: 20px;
+}

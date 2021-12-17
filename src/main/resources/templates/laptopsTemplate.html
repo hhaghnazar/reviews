@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="/styles/style.css"></link>
+        <title>A list of All Available Laptops</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <nav>
+                <section>
+                    <button>
+                        <a th:href="@{/}">Home</a>
+                    </button>
+                </section>
+            </nav>
+
+            <header>
+                <h1>A list of All Laptops</h1>
+            </header>
+
+
+
+            <main>
+                <h2>Laptop Reviews</h2>
+                <table>
+                    <tr>
+                        <td>Laptop Make</td>
+                        <td>Laptop Model</td>
+                    </tr>
+                    <tr th:each="laptop:${laptopsModel}">
+                        <td>
+                            <a th:href="@{/laptop/{id}(id=${laptop.id})}"
+                                th:text="${laptop.name}">
+                            </a>
+                        </td>
+                        <td th:each="laptop:${laptop}">
+                            <a th:href="@{/laptop/{id}(id=${laptop.id})}"
+                                th:text="${laptop.model}">
+
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </table>
+            </main>
+
+
+        </div>
+    </body>
+</html>
